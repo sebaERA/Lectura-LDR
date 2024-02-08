@@ -17,7 +17,12 @@ starCountRef.on('value', (snapshot) => {
   const data = snapshot.val()
   console.log(`El valor1 ha cambiado a ${data}`)
   var parrafo2=document.getElementById("valor-ldr");
-  let porcentaje=100-Math.round((data*100)/1024);
+// en caso de que la luminosidad máxima que quieras usar no sea el 0
+// Puedes ajustar el rango así, el 600 seria mi máximo de luminosidad: 
+//let porcentaje= Math.round(((data-600)*100)/(1024-600));
+//si quieres usar el valor ajustado comentar la línea de abajo y descomentar la de arriba
+
+  let porcentaje=100-Math.round(((data-600)*100)/(1024-600));
   parrafo2.innerHTML=`${porcentaje}%`;
 
     // Mapea el rango de porcentajes a un rango de grados de rotación (por ejemplo, de 0 a 180 grados)
