@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Rambal - Controlador LED</title>
+    <!-- Incluye las bibliotecas de Firebase, jQuery y Font Awesome -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: monospace;
+            background-color: rgb(255, 255, 255);
+        }
+        h1 {
+            color: rgb(0, 0, 0);
+            text-align: center;
+            margin: 50px;
+            font-size: 24px;
+        }
+        h2 {
+            color: rgb(0, 0, 0);
+            text-align: center;
+            margin: 50px;
+            font-size: 18px;
+        }
+        .barraTemp{
+            height: 200px;
+            width: 200px;
+            margin: auto;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .cont{
+            height: 100px;
+            width: 200px;
+        }
+        .circulo_centro {
+            width: 150px;
+            height: 150px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            margin: auto;
+            position: relative;
+            margin: -175px auto 50px;
+        }
+        .rectangulo{
+            width: 200px;
+            height: 100px;
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            margin: -125px auto 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rambal</h1>
+    <h2>Luminosidad</h2>
+    <script src="script.js"></script>
+    <div class="barraTemp" id="grado">
+        <div class="cont" style="background-color: rgb(143, 136, 136);"></div>
+        <div class="cont" style="background-color: rgb(1, 100, 248);"></div>   
+
+   </div>
+   <div class="circulo_centro"></div>
+    <div class="rectangulo"></div>
+    <h1 style="font-size: 22px; position: relative; margin: -125px auto 50px;"  id="valor-ldr"></h1>
+</body>
+</html>
