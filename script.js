@@ -22,7 +22,7 @@ starCountRef.on('value', (snapshot) => {
 //let porcentaje= Math.round(((data-600)*100)/(1024-600));
 //si quieres usar el valor ajustado comentar la línea de abajo y descomentar la de arriba
 
-  let porcentaje=100-Math.round(((data-600)*100)/(1024-600));
+  let porcentaje=100-Math.round(((data-500)*100)/(1024-500));
   parrafo2.innerHTML=`${porcentaje}%`;
 
     // Mapea el rango de porcentajes a un rango de grados de rotación (por ejemplo, de 0 a 180 grados)
